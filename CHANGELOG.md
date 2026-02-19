@@ -1,3 +1,11 @@
+### v0.1.13
+
+- Feature: Added TypingCodeBlock bit - code block with typing animation effect
+- Feature: Added Fireflies bit - animated particle fireflies effect using ParticleSystem
+- Feature: Added Carousel3D bit - 3D carousel navigation using Scene3D
+- Fix: Added missing ScrollingColumns export to BitPlayground
+- Improvement: Refactored CodeBlock component with CodeLine sub-component and stagger direction support
+
 ### v0.1.12
 
 - Feature: Added Terminal3D bit - animated 3D terminal display with Scene3D

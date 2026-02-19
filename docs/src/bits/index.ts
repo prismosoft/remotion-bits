@@ -70,6 +70,13 @@ import * as KenBurnsModule from './examples/scene-3d/KenBurns';
 import KenBurnsSource from './examples/scene-3d/KenBurns.tsx?raw';
 import * as Terminal3DModule from './examples/scene-3d/Terminal3D';
 import Terminal3DSource from './examples/scene-3d/Terminal3D.tsx?raw';
+import * as TypingCodeBlockModule from './examples/code-block/TypingCodeBlock';
+import TypingCodeBlockSource from './examples/code-block/TypingCodeBlock.tsx?raw';
+
+import * as FirefliesModule from './examples/particle-system/Fireflies';
+import FirefliesSource from './examples/particle-system/Fireflies.tsx?raw';
+import * as Carousel3DModule from './examples/scene-3d/Carousel';
+import Carousel3DSource from './examples/scene-3d/Carousel.tsx?raw';
 
 export interface BitMetadata {
   name: string;
@@ -162,6 +169,9 @@ export const bits = {
   Terminal3D: { ...Terminal3DModule, sourceCode: extractSource(Terminal3DSource) },
   BasicCodeBlock: { ...BasicCodeBlockModule, sourceCode: extractSource(BasicCodeBlockSource) },
   CursorFlyover: { ...CursorFlyoverModule, sourceCode: extractSource(CursorFlyoverSource) },
+  TypingCodeBlock: { ...TypingCodeBlockModule, sourceCode: extractSource(TypingCodeBlockSource) },
+  Fireflies: { ...FirefliesModule, sourceCode: extractSource(FirefliesSource) },
+  Carousel3D: { ...Carousel3DModule, sourceCode: extractSource(Carousel3DSource) },
 } as const;
 
 export type BitName = keyof typeof bits;
@@ -210,3 +220,7 @@ export const BasicCodeBlock = bits.BasicCodeBlock;
 export const CursorFlyover = bits.CursorFlyover;
 export const KenBurns = bits.KenBurns;
 export const Terminal3D = bits.Terminal3D;
+export const TypingCodeBlock = bits.TypingCodeBlock;
+export const Fireflies = bits.Fireflies;
+export const Carousel3D = bits.Carousel3D;
+

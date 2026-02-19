@@ -169,6 +169,7 @@ const compileUserCode = (
         Matrix4,
         createRect,
         useStepTiming,
+        ScrollingColumns,
       } = RemotionBits;
 
       ${cleanedTranspiled}
