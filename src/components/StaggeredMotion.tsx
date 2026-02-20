@@ -96,6 +96,8 @@ export const StaggeredMotion: React.FC<StaggeredMotionProps> = ({
   const renderChild = (child: React.ReactNode, actualIndex: number) => {
     const staggerIndex = calculateStaggerIndex(actualIndex, totalChildren, staggerDirection);
 
+    const resolvedDuration = duration ?? (frames ? frames[1] - frames[0] : 30);
+
     const progress = useMotionTiming({
       frames,
       duration,
@@ -111,6 +113,7 @@ export const StaggeredMotion: React.FC<StaggeredMotionProps> = ({
       transforms: transition,
       styles: { opacity, color, backgroundColor, blur, borderRadius },
       easing: easingFn,
+      duration: resolvedDuration,
     });
 
     if (React.isValidElement(child)) {

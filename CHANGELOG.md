@@ -1,3 +1,10 @@
+### v0.1.14
+
+- Feature: Added Fracture Reassemble and Mosaic Reframe bits for advanced staggered 3D layout transitions
+- Fix: Added missing `Easing` export injection in BitPlayground runtime compilation context
+- Improvement: Updated `StaggeredMotion` to pass resolved duration into motion interpolation for consistent timing
+- Docs: Added documentation pages for Fracture Reassemble and Mosaic Reframe and refreshed bit authoring guidance
+
 ### v0.1.13
 
 - Feature: Added TypingCodeBlock bit - code block with typing animation effect

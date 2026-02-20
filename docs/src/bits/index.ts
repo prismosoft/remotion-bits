@@ -77,6 +77,10 @@ import * as FirefliesModule from './examples/particle-system/Fireflies';
 import FirefliesSource from './examples/particle-system/Fireflies.tsx?raw';
 import * as Carousel3DModule from './examples/scene-3d/Carousel';
 import Carousel3DSource from './examples/scene-3d/Carousel.tsx?raw';
+import * as FractureReassembleModule from './examples/staggered-motion/FractureReassemble';
+import FractureReassembleSource from './examples/staggered-motion/FractureReassemble.tsx?raw';
+import * as MosaicReframeModule from './examples/staggered-motion/MosaicReframe';
+import MosaicReframeSource from './examples/staggered-motion/MosaicReframe.tsx?raw';
 
 export interface BitMetadata {
   name: string;
@@ -172,6 +176,8 @@ export const bits = {
   TypingCodeBlock: { ...TypingCodeBlockModule, sourceCode: extractSource(TypingCodeBlockSource) },
   Fireflies: { ...FirefliesModule, sourceCode: extractSource(FirefliesSource) },
   Carousel3D: { ...Carousel3DModule, sourceCode: extractSource(Carousel3DSource) },
+  FractureReassemble: { ...FractureReassembleModule, sourceCode: extractSource(FractureReassembleSource) },
+  MosaicReframe: { ...MosaicReframeModule, sourceCode: extractSource(MosaicReframeSource) },
 } as const;
 
 export type BitName = keyof typeof bits;
@@ -223,4 +229,7 @@ export const Terminal3D = bits.Terminal3D;
 export const TypingCodeBlock = bits.TypingCodeBlock;
 export const Fireflies = bits.Fireflies;
 export const Carousel3D = bits.Carousel3D;
+export const StoryGraphFlythrough = bits.StoryGraphFlythrough;
+export const FractureReassemble = bits.FractureReassemble;
+export const MosaicReframe = bits.MosaicReframe;
 

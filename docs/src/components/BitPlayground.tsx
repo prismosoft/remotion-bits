@@ -134,6 +134,7 @@ const compileUserCode = (
         random,
         Sequence,
         Img,
+        Easing,
       } = Remotion;
       const {
         AnimatedText,

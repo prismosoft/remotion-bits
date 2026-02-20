@@ -76,6 +76,10 @@ When working with Bits, always keep following in mind:
 - Do not wrap a Bit in the AutoFill, Bits are pre-wrapped for display
 - Use the `useViewportRect` and fractional sizing, do not use absolute values
 - Use `rect.vmin`, `rect.vmax` for responsive sizing of the Bit elements
+- For staged in/out motion, prefer `StaggeredMotion` sequencing (`x/y/z/rotate/opacity` keyframes with `duration`, `delay`/`stagger`, and `hold(...)`) instead of manual frame `interpolate` phase calculations
+- The `export const Component` function body must be **fully self-contained** — it must NOT reference any variables, constants, or functions defined outside of it (i.e. at module scope). The BitPlayground extracts only the Component function body and executes it in an isolated sandbox, so any external references will cause `ReferenceError`s. Move all constants, helper functions, and data arrays inside the Component body.
+- Always use theme colors from `docs/src/styles/custom.css` (`--color-primary`, `--color-primary-hover`, `--color-background-dark`, `--color-surface-dark`, `--color-surface-light`, `--color-border-dark`, `--color-border-light`). Never use arbitrary color values that aren't from the theme palette.
+- Never use emoji characters (e.g. 🚀, ⭐, 📈) as visual elements in Bits. Use inline SVG icons instead for crisp, consistent rendering across platforms.
 
 ### Maintaining the Skill File
 
