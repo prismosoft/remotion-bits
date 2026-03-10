@@ -9,6 +9,8 @@ import {
   TypeTransitionShowcase,
   ComplexGradientShowcase,
   ShortestPathAngleShowcase,
+  ColorBlendsShowcase,
+  LiquidEtherShowcase,
 } from "./BackgroundTransitionShowcaseItem";
 
 export const BackgroundTransitionShowcase: React.FC = () => {
@@ -44,6 +46,14 @@ export const BackgroundTransitionShowcase: React.FC = () => {
 
       <Sequence from={870} durationInFrames={90}>
         <ShortestPathAngleShowcase />
+      </Sequence>
+
+      <Sequence from={960} durationInFrames={120}>
+        <ColorBlendsShowcase />
+      </Sequence>
+
+      <Sequence from={1080} durationInFrames={120}>
+        <LiquidEtherShowcase />
       </Sequence>
     </>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Sequence } from "remotion";
-import { MotionTransition } from "../../../src/components/MotionTransition";
+import { StaggeredMotion } from "../../../src/components";
 import { Center } from "./Center";
 
 const Bg = ({ children }: { children: React.ReactNode }) => (
@@ -78,7 +78,7 @@ export const SimpleFadeSlideShowcase: React.FC = () => {
     <Bg>
       <div style={labelStyle}>Simple Fade & Slide</div>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        <MotionTransition
+        <StaggeredMotion
           transition={{
             opacity: [0, 1],
             y: [80, 0],
@@ -87,7 +87,7 @@ export const SimpleFadeSlideShowcase: React.FC = () => {
           }}
         >
           <Circle color="#205ea6" />
-        </MotionTransition>
+        </StaggeredMotion>
       </div>
     </Bg>
   );
@@ -98,7 +98,7 @@ export const SimultaneousFadeShowcase: React.FC = () => {
     <Bg>
       <div style={labelStyle}>Simultaneous Fade In</div>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        <MotionTransition
+        <StaggeredMotion
           transition={{
             opacity: [0, 1],
             duration: 60,
@@ -115,7 +115,7 @@ export const SimultaneousFadeShowcase: React.FC = () => {
           <RoundedSquare color="#768d21" />
           <Star color="#da702c" />
           <Cross color="#735eb5" />
-        </MotionTransition>
+        </StaggeredMotion>
       </div>
     </Bg>
   );
@@ -126,7 +126,7 @@ export const FadeInStaggerShowcase: React.FC = () => {
     <Bg>
       <div style={labelStyle}>Stagger (Forward)</div>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        <MotionTransition
+        <StaggeredMotion
           transition={{
             opacity: [0, 1],
             y: [300, 0],
@@ -146,7 +146,7 @@ export const FadeInStaggerShowcase: React.FC = () => {
           <RoundedSquare color="#768d21" />
           <Star color="#da702c" />
           <Cross color="#735eb5" />
-        </MotionTransition>
+        </StaggeredMotion>
       </div>
     </Bg>
   );
@@ -157,7 +157,7 @@ export const ReverseStaggerShowcase: React.FC = () => {
     <Bg>
       <div style={labelStyle}>Stagger (Reverse)</div>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        <MotionTransition
+        <StaggeredMotion
           transition={{
             opacity: [0, 1],
             y: [300, 0],
@@ -177,7 +177,7 @@ export const ReverseStaggerShowcase: React.FC = () => {
           <RoundedSquare color="#768d21" />
           <Star color="#da702c" />
           <Cross color="#735eb5" />
-        </MotionTransition>
+        </StaggeredMotion>
       </div>
     </Bg>
   );
@@ -188,7 +188,7 @@ export const CenterStaggerShowcase: React.FC = () => {
     <Bg>
       <div style={labelStyle}>Stagger (Center)</div>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        <MotionTransition
+        <StaggeredMotion
           transition={{
             opacity: [0, 1],
             y: [300, 0],
@@ -208,7 +208,7 @@ export const CenterStaggerShowcase: React.FC = () => {
           <RoundedSquare color="#768d21" />
           <Star color="#da702c" />
           <Cross color="#735eb5" />
-        </MotionTransition>
+        </StaggeredMotion>
       </div>
     </Bg>
   );
@@ -219,7 +219,7 @@ export const ComplexMotionShowcase: React.FC = () => {
     <Bg>
       <div style={labelStyle}>Complex Multi-Property Animation</div>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        <MotionTransition
+        <StaggeredMotion
           transition={{
             opacity: [0, 1, 1, 0.8],
             y: [100, -20, 0, 0],
@@ -240,7 +240,7 @@ export const ComplexMotionShowcase: React.FC = () => {
           <Triangle color="#d14d41" />
           <RoundedSquare color="#768d21" />
           <Star color="#da702c" />
-        </MotionTransition>
+        </StaggeredMotion>
       </div>
     </Bg>
   );
@@ -259,14 +259,14 @@ export const RandomGridShowcase: React.FC = () => {
 
   return (
     <Bg>
-      <MotionTransition
+      <StaggeredMotion
         transition={{
           y: [200, -200],
           duration: 120,
         }}
       >
 
-        <MotionTransition
+        <StaggeredMotion
           transition={{
             opacity: [0, 1],
             scale: [0.5, 1],
@@ -282,8 +282,8 @@ export const RandomGridShowcase: React.FC = () => {
           }}
         >
           {gridItems}
-        </MotionTransition>
-      </MotionTransition>
+        </StaggeredMotion>
+      </StaggeredMotion>
     </Bg>
   );
 };

@@ -1,0 +1,112 @@
+---
+title: ColorBends
+description: GPU shader-based fluid color blends for animated backgrounds.
+---
+
+The `ColorBends` component renders animated fluid color blends with a lightweight WebGL shader. It is frame-driven using Remotion hooks so renders remain deterministic.
+
+## Usage
+
+```tsx
+import { ColorBends } from "remotion-bits";
+
+export const MyComposition = () => {
+  return (
+    <ColorBends
+      rotation={0}
+      autoRotate={0}
+      speed={0.2}
+      scale={1}
+      frequency={1}
+      warpStrength={1}
+      parallax={0.5}
+      noise={0.1}
+      colors={["#ec8b49", "#fcc192", "#343331", "#1c1b1a"]}
+    >
+      <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center" }}>
+        Overlay content
+      </div>
+    </ColorBends>
+  );
+};
+```
+
+## Props
+
+### `rotation`
+**Type:** `number`  
+**Optional** (Default: `0`)
+
+Base rotation angle in degrees.
+
+### `autoRotate`
+**Type:** `number`  
+**Optional** (Default: `0`)
+
+Additional rotation speed in degrees per second.
+
+### `speed`
+**Type:** `number`  
+**Optional** (Default: `0.2`)
+
+Animation speed multiplier.
+
+### `colors`
+**Type:** `string[]`  
+**Optional** (Default: `[]`)
+
+Up to 8 colors used for blending. When omitted, procedural RGB blending is used.
+
+### `transparent`
+**Type:** `boolean`  
+**Optional** (Default: `true`)
+
+When `true`, alpha follows color coverage and allows compositing over other layers.
+
+### `scale`
+**Type:** `number`  
+**Optional** (Default: `1`)
+
+Zoom level of the field.
+
+### `frequency`
+**Type:** `number`  
+**Optional** (Default: `1`)
+
+Spatial frequency of wave detail.
+
+### `warpStrength`
+**Type:** `number`  
+**Optional** (Default: `1`)
+
+Strength of flow warping.
+
+### `parallax`
+**Type:** `number`  
+**Optional** (Default: `0.5`)
+
+Adds subtle temporal offset to the field for depth-like drift.
+
+### `noise`
+**Type:** `number`  
+**Optional** (Default: `0.1`)
+
+Film-like noise intensity.
+
+### `className`
+**Type:** `string`  
+**Optional**
+
+Class applied to the container.
+
+### `style`
+**Type:** `React.CSSProperties`  
+**Optional**
+
+Inline styles applied to the container.
+
+### `children`
+**Type:** `React.ReactNode`  
+**Optional**
+
+Content rendered on top of the shader canvas.

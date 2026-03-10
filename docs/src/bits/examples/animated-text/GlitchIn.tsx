@@ -1,7 +1,5 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { AnimatedText } from "remotion-bits";
-import { AbsoluteFill } from "remotion";
-import { useViewportRect } from "remotion-bits";
 
 export const metadata = {
     name: "Glitch In",

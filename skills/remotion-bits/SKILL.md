@@ -32,7 +32,7 @@ import {
   useScene3D, useCamera, useActiveStep,
   // Animation Components
   AnimatedText, AnimatedCounter, TypeWriter, CodeBlock,
-  StaggeredMotion, GradientTransition, MatrixRain, ScrollingColumns,
+  StaggeredMotion, GradientTransition, ColorBends, LiquidEther, MatrixRain, ScrollingColumns,
   Particles, Spawner, Behavior,
   // Core
   useViewportRect,
@@ -781,6 +781,39 @@ Steps can contain rich content — cards, particles, code blocks, counters:
   duration={90}
   easing="easeInOut"
   shortestAngle={true}   // Interpolate angles via shortest path
+/>
+```
+
+### ColorBends
+
+```tsx
+<ColorBends
+  rotation={0}
+  autoRotate={0}
+  speed={0.2}
+  scale={1}
+  frequency={1}
+  warpStrength={1}
+  parallax={0.5}
+  noise={0.1}
+  colors={["#ec8b49", "#fcc192", "#343331", "#1c1b1a"]}
+/>
+```
+
+### LiquidEther
+
+```tsx
+<LiquidEther
+  mouseForce={20}
+  cursorSize={100}
+  resolution={0.5}
+  isViscous
+  viscous={30}
+  iterationsViscous={32}
+  iterationsPoisson={32}
+  isBounce={false}
+  autoSpeed={0.2}
+  colors={["#ec8b49", "#fcc192", "#343331", "#1c1b1a"]}
 />
 ```
 

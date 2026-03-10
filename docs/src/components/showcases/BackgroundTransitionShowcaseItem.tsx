@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, useVideoConfig } from "remotion";
+import { useVideoConfig } from "remotion";
 import { BackgroundTransition } from "remotion-bits";
 import { Center } from "./Center";
 

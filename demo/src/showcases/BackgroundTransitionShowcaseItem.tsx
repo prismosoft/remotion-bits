@@ -1,6 +1,5 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
-import { BackgroundTransition } from "../../../src/components";
+import { ColorBends, GradientTransition, LiquidEther } from "../../../src/components";
 import { Center } from "./Center";
 
 const textStyle = {
@@ -13,7 +12,7 @@ const textStyle = {
 };
 
 export const LinearGradientShowcase: React.FC = () => (
-  <BackgroundTransition
+  <GradientTransition
     gradient={[
       "linear-gradient(0deg, #205ea6 0%, #735eb5 100%)",
       "linear-gradient(180deg, #ce5d97 0%, #d14d41 100%)",
@@ -23,11 +22,11 @@ export const LinearGradientShowcase: React.FC = () => (
     <Center style={{ padding: "4rem", ...textStyle }}>
       Linear Gradient Transition
     </Center>
-  </BackgroundTransition>
+  </GradientTransition>
 );
 
 export const RadialGradientShowcase: React.FC = () => (
-  <BackgroundTransition
+  <GradientTransition
     gradient={[
       "radial-gradient(circle, #d14d41 0%, #24837b 100%)",
       "radial-gradient(circle, #dfb431 0%, #2f968d 100%)",
@@ -38,11 +37,11 @@ export const RadialGradientShowcase: React.FC = () => (
     <Center style={{ padding: "4rem", ...textStyle }}>
       Radial Gradient Transition
     </Center>
-  </BackgroundTransition>
+  </GradientTransition>
 );
 
 export const ConicGradientShowcase: React.FC = () => (
-  <BackgroundTransition
+  <GradientTransition
     gradient={[
       "conic-gradient(from 0deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000)",
       "conic-gradient(from 180deg, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000, #ff00ff)",
@@ -52,11 +51,11 @@ export const ConicGradientShowcase: React.FC = () => (
     <Center style={{ padding: "4rem", ...textStyle }}>
       Conic Rainbow
     </Center>
-  </BackgroundTransition>
+  </GradientTransition>
 );
 
 export const MultiStopGradientShowcase: React.FC = () => (
-  <BackgroundTransition
+  <GradientTransition
     gradient={[
       "linear-gradient(45deg, #ce5d97 0%, #dfb431 50%, #2f968d 100%)",
       "linear-gradient(225deg, #205ea6 0%, #735eb5 50%, #ce5d97 100%)",
@@ -68,11 +67,11 @@ export const MultiStopGradientShowcase: React.FC = () => (
     <Center style={{ padding: "4rem", ...textStyle }}>
       Multi-Stop Gradients
     </Center>
-  </BackgroundTransition>
+  </GradientTransition>
 );
 
 export const AngleInterpolationShowcase: React.FC = () => (
-  <BackgroundTransition
+  <GradientTransition
     gradient={[
       "linear-gradient(0deg, #d14d41 0%, #da702c 100%)",
       "linear-gradient(90deg, #c03e35 0%, #dfb431 100%)",
@@ -85,11 +84,11 @@ export const AngleInterpolationShowcase: React.FC = () => (
     <Center style={{ padding: "4rem", ...textStyle }}>
       Angle Rotation
     </Center>
-  </BackgroundTransition>
+  </GradientTransition>
 );
 
 export const TypeTransitionShowcase: React.FC = () => (
-  <BackgroundTransition
+  <GradientTransition
     gradient={[
       "linear-gradient(90deg, #5e409d 0%, #4f3685 100%)",
       "radial-gradient(circle, #b74583 0%, #2f968d 50%, #768d21 100%)",
@@ -102,11 +101,11 @@ export const TypeTransitionShowcase: React.FC = () => (
     <Center style={{ padding: "4rem", ...textStyle }}>
       Gradient Type Transitions
     </Center>
-  </BackgroundTransition>
+  </GradientTransition>
 );
 
 export const ComplexGradientShowcase: React.FC = () => (
-  <BackgroundTransition
+  <GradientTransition
     gradient={[
       "linear-gradient(135deg, #205ea6 0%, #735eb5 25%, #ce5d97 50%, #2f968d 75%, #24837b 100%)",
       "linear-gradient(225deg, #ce5d97 0%, #d14d41 25%, #dfb431 50%, #1a4f8c 75%, #205ea6 100%)",
@@ -116,11 +115,11 @@ export const ComplexGradientShowcase: React.FC = () => (
     <Center style={{ padding: "4rem", ...textStyle }}>
       Complex Multi-Stop
     </Center>
-  </BackgroundTransition>
+  </GradientTransition>
 );
 
 export const ShortestPathAngleShowcase: React.FC = () => (
-  <BackgroundTransition
+  <GradientTransition
     gradient={[
       "linear-gradient(350deg, #ce5d97 0%, #dfb431 100%)",
       "linear-gradient(10deg, #2f968d 0%, #4f3685 100%)",
@@ -130,5 +129,43 @@ export const ShortestPathAngleShowcase: React.FC = () => (
     <Center style={{ padding: "4rem", ...textStyle }}>
       Shortest Path (350° → 10°)
     </Center>
-  </BackgroundTransition>
+  </GradientTransition>
+);
+
+export const ColorBlendsShowcase: React.FC = () => (
+  <ColorBends
+    rotation={0}
+    autoRotate={0}
+    speed={0.2}
+    scale={1}
+    frequency={1}
+    warpStrength={1}
+    parallax={0.5}
+    noise={0.1}
+    transparent={false}
+    colors={["#ec8b49", "#fcc192", "#343331", "#1c1b1a"]}
+  >
+    <Center style={{ padding: "4rem", ...textStyle }}>
+      Color Blends
+    </Center>
+  </ColorBends>
+);
+
+export const LiquidEtherShowcase: React.FC = () => (
+  <LiquidEther
+    mouseForce={20}
+    cursorSize={100}
+    resolution={0.5}
+    isViscous
+    viscous={30}
+    iterationsViscous={32}
+    iterationsPoisson={32}
+    isBounce={false}
+    autoSpeed={0.2}
+    colors={["#ec8b49", "#fcc192", "#343331", "#1c1b1a"]}
+  >
+    <Center style={{ padding: "4rem", ...textStyle }}>
+      Liquid Ether
+    </Center>
+  </LiquidEther>
 );

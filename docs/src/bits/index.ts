@@ -24,6 +24,10 @@ import * as RadialGradientModule from './examples/gradient-transition/RadialGrad
 import RadialGradientSource from './examples/gradient-transition/RadialGradient.tsx?raw';
 import * as ConicGradientModule from './examples/gradient-transition/ConicGradient';
 import ConicGradientSource from './examples/gradient-transition/ConicGradient.tsx?raw';
+import * as ColorBlendsModule from './examples/gradient-transition/ColorBlends';
+import ColorBlendsSource from './examples/gradient-transition/ColorBlends.tsx?raw';
+import * as LiquidEtherModule from './examples/gradient-transition/LiquidEther';
+import LiquidEtherSource from './examples/gradient-transition/LiquidEther.tsx?raw';
 import * as ParticlesSnowModule from './examples/particle-system/ParticlesSnow';
 import ParticlesSnowSource from './examples/particle-system/ParticlesSnow.tsx?raw';
 import * as ParticlesFountainModule from './examples/particle-system/ParticlesFountain';
@@ -150,6 +154,8 @@ export const bits = {
   LinearGradient: { ...LinearGradientModule, sourceCode: extractSource(LinearGradientSource) },
   RadialGradient: { ...RadialGradientModule, sourceCode: extractSource(RadialGradientSource) },
   ConicGradient: { ...ConicGradientModule, sourceCode: extractSource(ConicGradientSource) },
+  ColorBlends: { ...ColorBlendsModule, sourceCode: extractSource(ColorBlendsSource) },
+  LiquidEther: { ...LiquidEtherModule, sourceCode: extractSource(LiquidEtherSource) },
   ParticlesSnow: { ...ParticlesSnowModule, sourceCode: extractSource(ParticlesSnowSource) },
   ParticlesFountain: { ...ParticlesFountainModule, sourceCode: extractSource(ParticlesFountainSource) },
   ParticlesGrid: { ...ParticlesGridModule, sourceCode: extractSource(ParticlesGridSource) },
@@ -203,6 +209,8 @@ export const ListReveal = bits.ListReveal;
 export const LinearGradient = bits.LinearGradient;
 export const RadialGradient = bits.RadialGradient;
 export const ConicGradient = bits.ConicGradient;
+export const ColorBlends = bits.ColorBlends;
+export const LiquidEther = bits.LiquidEther;
 export const ParticlesSnow = bits.ParticlesSnow;
 export const ParticlesFountain = bits.ParticlesFountain;
 export const ParticlesGrid = bits.ParticlesGrid;
@@ -232,4 +240,3 @@ export const Carousel3D = bits.Carousel3D;
 export const StoryGraphFlythrough = bits.StoryGraphFlythrough;
 export const FractureReassemble = bits.FractureReassemble;
 export const MosaicReframe = bits.MosaicReframe;
-

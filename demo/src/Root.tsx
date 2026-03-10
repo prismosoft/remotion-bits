@@ -27,6 +27,8 @@ import {
   TypeTransitionShowcase,
   ComplexGradientShowcase,
   ShortestPathAngleShowcase,
+  ColorBlendsShowcase,
+  LiquidEtherShowcase,
 } from "./showcases/BackgroundTransitionShowcaseItem";
 import {
   SimpleFadeSlideShowcase,
@@ -54,7 +56,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BackgroundTransition"
         component={BackgroundTransitionShowcase}
-        durationInFrames={960}
+        durationInFrames={1200}
         fps={30}
         width={1920}
         height={1080}
@@ -238,6 +240,24 @@ export const RemotionRoot: React.FC = () => {
         id="BackgroundTransition-ShortestPath"
         component={ShortestPathAngleShowcase}
         durationInFrames={90}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+
+      <Composition
+        id="BackgroundTransition-ColorBlends"
+        component={ColorBlendsShowcase}
+        durationInFrames={120}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+
+      <Composition
+        id="BackgroundTransition-LiquidEther"
+        component={LiquidEtherShowcase}
+        durationInFrames={120}
         fps={30}
         width={1920}
         height={1080}

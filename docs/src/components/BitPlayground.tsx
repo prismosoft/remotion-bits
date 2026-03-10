@@ -141,6 +141,8 @@ const compileUserCode = (
         MatrixRain,
         StaggeredMotion,
         GradientTransition,
+        ColorBends,
+        LiquidEther,
         Particles,
         Spawner,
         Behavior,

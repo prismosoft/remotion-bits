@@ -4,7 +4,18 @@ export type { TypeWriterProps, TypeWriterTransitionProps } from "./TypeWriter";
 export { AnimatedCounter } from "./AnimatedCounter";
 export type { AnimatedCounterProps, AnimatedCounterTransitionProps } from "./AnimatedCounter";
 export { MatrixRain } from "./MatrixRain";
-export { GradientTransition } from "./GradientTransition";
+export {
+  GradientTransition,
+  GradientTransition as BackgroundTransition,
+} from "./GradientTransition";
+export type {
+  GradientTransitionProps,
+  GradientTransitionProps as BackgroundTransitionProps,
+} from "./GradientTransition";
+export { ColorBends } from "./ColorBends";
+export type { ColorBendsProps } from "./ColorBends";
+export { LiquidEther } from "./LiquidEther";
+export type { LiquidEtherProps } from "./LiquidEther";
 export { StaggeredMotion } from "./StaggeredMotion";
 export { ScrollingColumns } from "./ScrollingImages";
 export type { ScrollingColumnsProps, ScrollingColumnConfig } from "./ScrollingImages";

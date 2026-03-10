@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { TextTransition } from "../../../src/components";
+import { AnimatedText } from "../../../src/components";
 import { Center } from "./Center";
 
 const baseStyle = {
@@ -21,15 +21,15 @@ export const Bg = ({ children }: { children: React.ReactNode }) => (
 
 export const FadeInShowcase: React.FC = () => (
   <Bg>
-    <TextTransition transition={{ opacity: [0, 1] }}>
+    <AnimatedText transition={{ opacity: [0, 1] }}>
       Hello World
-    </TextTransition>
+    </AnimatedText>
   </Bg>
 );
 
 export const SlideFromLeftShowcase: React.FC = () => (
   <Bg>
-    <TextTransition
+    <AnimatedText
       transition={{
         opacity: [0, 1],
         x: [-400, 0],
@@ -37,13 +37,13 @@ export const SlideFromLeftShowcase: React.FC = () => (
       }}
     >
       Sliding Text
-    </TextTransition>
+    </AnimatedText>
   </Bg>
 );
 
 export const WordByWordShowcase: React.FC = () => (
   <Bg>
-    <TextTransition
+    <AnimatedText
       transition={{
         y: [200, 0],
         opacity: [0, 1],
@@ -53,13 +53,13 @@ export const WordByWordShowcase: React.FC = () => (
       }}
     >
       This appears word by word
-    </TextTransition>
+    </AnimatedText>
   </Bg>
 );
 
 export const CharacterColorShowcase: React.FC = () => (
   <Bg>
-    <TextTransition
+    <AnimatedText
       transition={{
         color: ["#fffcf0", "#100f0f", "oklch(100% 0.3 270)"],
         opacity: [1, 0.1, 1],
@@ -69,13 +69,13 @@ export const CharacterColorShowcase: React.FC = () => (
       }}
     >
       Color Transition
-    </TextTransition>
+    </AnimatedText>
   </Bg>
 );
 
 export const ComplexAnimationShowcase: React.FC = () => (
   <Bg>
-    <TextTransition
+    <AnimatedText
       transition={{
         x: [200, 0],
         y: [50, 0],
@@ -89,17 +89,17 @@ export const ComplexAnimationShowcase: React.FC = () => (
       }}
     >
       Composite Animation
-    </TextTransition>
+    </AnimatedText>
   </Bg>
 );
 
 export const CyclingTextShowcase: React.FC = () => (
   <Bg>
-    <TextTransition
+    <AnimatedText
       transition={{
         opacity: [0, 1, 0],
         y: [24, 0, -24],
-        frames: [0, 25, 30],
+        duration: 30,
         cycle: {
           texts: ["Create", "Animate", "Export"],
           itemDuration: 30,
@@ -111,7 +111,7 @@ export const CyclingTextShowcase: React.FC = () => (
 
 export const CustomEasingShowcase: React.FC = () => (
   <Bg>
-    <TextTransition
+    <AnimatedText
       transition={{
         x: [-100, 0],
         opacity: [0, 1],
@@ -121,13 +121,13 @@ export const CustomEasingShowcase: React.FC = () => (
       }}
     >
       Custom Easing
-    </TextTransition>
+    </AnimatedText>
   </Bg>
 );
 
 export const LineByLineShowcase: React.FC = () => (
   <Bg>
-    <TextTransition
+    <AnimatedText
       transition={{
         x: [-50, 0],
         opacity: [0, 1],
@@ -137,6 +137,6 @@ export const LineByLineShowcase: React.FC = () => (
       }}
     >
       {`First line\nSecond line\nThird line`}
-    </TextTransition>
+    </AnimatedText>
   </Bg>
 );

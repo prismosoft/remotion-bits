@@ -1,0 +1,131 @@
+---
+title: LiquidEther
+description: Deterministic fluid-style background simulation using GPU shader passes.
+---
+
+The `LiquidEther` component renders a fluid-like velocity field with deterministic frame stepping for Remotion renders.
+
+## Usage
+
+```tsx
+import { LiquidEther } from "remotion-bits";
+
+export const MyComposition = () => {
+  return (
+    <LiquidEther
+      mouseForce={20}
+      cursorSize={100}
+      resolution={0.5}
+      isViscous
+      viscous={30}
+      iterationsViscous={32}
+      iterationsPoisson={32}
+      isBounce={false}
+      autoSpeed={0.2}
+      colors={["#ec8b49", "#fcc192", "#343331", "#1c1b1a"]}
+    >
+      <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center" }}>
+        Overlay content
+      </div>
+    </LiquidEther>
+  );
+};
+```
+
+## Props
+
+### `mouseForce`
+**Type:** `number`  
+**Optional** (Default: `20`)
+
+Strength applied to fluid velocity from the motion driver.
+
+### `cursorSize`
+**Type:** `number`  
+**Optional** (Default: `100`)
+
+Radius of the force area in simulation cells.
+
+### `isViscous`
+**Type:** `boolean`  
+**Optional** (Default: `false`)
+
+Enables viscosity diffusion pass.
+
+### `viscous`
+**Type:** `number`  
+**Optional** (Default: `30`)
+
+Viscosity coefficient used by diffusion.
+
+### `iterationsViscous`
+**Type:** `number`  
+**Optional** (Default: `32`)
+
+Iterations for the viscosity solve.
+
+### `iterationsPoisson`
+**Type:** `number`  
+**Optional** (Default: `32`)
+
+Iterations for pressure solve.
+
+### `dt`
+**Type:** `number`  
+**Optional** (Default: `0.014`)
+
+Simulation timestep in seconds.
+
+### `BFECC`
+**Type:** `boolean`  
+**Optional** (Default: `true`)
+
+Uses BFECC advection correction for reduced numerical dissipation.
+
+### `resolution`
+**Type:** `number`  
+**Optional** (Default: `0.5`)
+
+Internal fluid grid scale relative to composition size.
+
+### `isBounce`
+**Type:** `boolean`  
+**Optional** (Default: `false`)
+
+Enables bounce-style boundary handling.
+
+### `autoSpeed`
+**Type:** `number`  
+**Optional** (Default: `0.2`)
+
+Speed of deterministic automatic motion driver.
+
+### `seed`
+**Type:** `number`  
+**Optional** (Default: `42`)
+
+Seed for deterministic path generation.
+
+### `colors`
+**Type:** `string[]`  
+**Optional**
+
+Palette stops used to colorize velocity magnitude.
+
+### `className`
+**Type:** `string`  
+**Optional**
+
+Class names for the container.
+
+### `style`
+**Type:** `React.CSSProperties`  
+**Optional**
+
+Inline styles merged onto the container.
+
+### `children`
+**Type:** `React.ReactNode`  
+**Optional**
+
+Content layered above the simulation.

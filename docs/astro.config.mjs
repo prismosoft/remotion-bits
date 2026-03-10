@@ -127,6 +127,8 @@ export default defineConfig({
                                 { label: 'Animated Text', link: '/docs/reference/animated-text' },
                                 { label: 'Typewriter', link: '/docs/reference/typewriter' },
                                 { label: 'Gradient Transition', link: '/docs/reference/gradient-transition' },
+                                { label: 'Color Bends', link: '/docs/reference/color-bends' },
+                                { label: 'Liquid Ether', link: '/docs/reference/liquid-ether' },
                                 { label: 'Particle System', link: '/docs/reference/particle-system' },
                                 { label: 'Scene3D', link: '/docs/reference/scene3d' },
                                 { label: 'Step', link: '/docs/reference/step' },

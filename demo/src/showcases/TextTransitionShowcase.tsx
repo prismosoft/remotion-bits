@@ -1,15 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Sequence } from "remotion";
-import { TextTransition } from "../../../src/components";
-import { Center } from "./Center";
 import { CharacterColorShowcase, ComplexAnimationShowcase, CustomEasingShowcase, CyclingTextShowcase, FadeInShowcase, LineByLineShowcase, SlideFromLeftShowcase, WordByWordShowcase } from './TextTransitionShowcaseItem';
-
-const baseStyle = {
-  fontSize: "12rem",
-  fontWeight: 700,
-  color: "#fffcf0",
-  fontFamily: "Inter, ui-sans-serif, system-ui",
-};
 
 export const TextTransitionShowcase: React.FC = () => {
   return (
@@ -45,6 +36,7 @@ export const TextTransitionShowcase: React.FC = () => {
       <Sequence from={780} durationInFrames={120}>
         <LineByLineShowcase />
       </Sequence>
+
     </AbsoluteFill>
   );
 };

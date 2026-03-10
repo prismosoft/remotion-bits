@@ -5,8 +5,8 @@ import {
   useMotionTiming,
   buildMotionStyles,
   interpolateKeyframes,
-} from "../utils/motion";
-import { useViewportRect } from "../hooks/useViewportRect";
+} from "../utils";
+import { useViewportRect } from "../hooks";
 
 export type CodeBlockProps = {
   // Content

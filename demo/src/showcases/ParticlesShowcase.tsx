@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, useVideoConfig } from "remotion";
-import { Particles, Spawner, Behavior } from "../../../src/components/Particles";
+import { Particles, Spawner, Behavior } from "../../../src/components";
 import { Center } from "./Center";
 
 export const ParticlesSnowShowcase = () => {
